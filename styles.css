@@ -1,0 +1,56 @@
+:root{
+  --color-btn: rgb(17, 97, 134);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  background: url(https://media.meer.com/attachments/67002b29c73b35b60914c57dfeceb1c7f07eeae4/store/fill/1020/574/ab24be68314650adb7fff71adf67c532382ab7512b1a591ae1e3edb7b215/Vista-panoramica-de-Medellin-Colombia.jpg);
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btn-buscar{
+    height: 50px;
+    background-color: var(--color-btn);
+}
+
+.btn-ver-mas{
+  width: 100px;
+}
+
+.span-precio{
+  color: var(--color-btn);
+}
+
+.img-container{
+  height: 265px;
+}
+
+.img-container img {
+  object-fit: cover;
+}
+
+.container-footer,
+.btn-ver-mas{
+  background-color: var(--color-btn);
+}
+
+#parallax .banner input {
+  border: 1px solid var(--color-btn);
+}
+
+.offcanvas{
+  width: 350px !important;
+}
+ul li {
+  list-style: none;
+}

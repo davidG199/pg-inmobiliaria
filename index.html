@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,18 +9,19 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Inmobiliaria Globla Sin limite</title>
   </head>
   <body>
     <!-- barra de navegacion -->
     <header>
-      <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <nav class="navbar navbar-expand-md bg-white fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
-              src="https://scontent.feoh4-4.fna.fbcdn.net/v/t39.30808-6/335414337_540572931396665_2274541916622018294_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeEwEM3TH8C0pZopMSTBaFpQEVOBX_ilLqURU4Ff-KUupT6gy3lZq6Jq__N7mT3RTeNMBuJWBWUBWlldN087viq4&_nc_ohc=ECxvT6M7QE8AX8NhX0T&_nc_ht=scontent.feoh4-4.fna&oh=00_AfBXnQluFjrb7z1Cl03511USL1iRYwxr_8VLG7hmMT-bJA&oe=649906F2"
+              src="./assets/logo-inmobiliaria.jpg"
               alt="logo"
-              width="200"
+              width="170"
               height="80"
             />
           </a>
@@ -35,10 +36,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul
-              class="navbar-nav d-flex justify-content-end mb-2 mb-lg-0"
-            >
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
                   >Inicio</a
@@ -79,9 +81,335 @@
     </header>
     <!-- contenido principal de la pagina -->
     <main>
+      <!-- banner de la pagina de inicio -->
+      <section id="parallax">
+        <div
+          class="banner d-flex justify-content-center align-items-center mt-4"
+        >
+          <!-- cuadro de busqueda  -->
+          <div class="container text-white">
+            <h2 class="text-center mb-3">Busca tu Apartamento</h2>
+            <div
+              class="container bg-white opacity-75 p-3 d-flex justify-content-between rounded align-items-center flex-column flex-md-row"
+            >
+              <div class="flex-column d-flex">
+                <label for="sector" class="text-dark mb-2 text-center"
+                  >Buscar por sector</label
+                >
+                <input
+                  placeholder="Sector"
+                  type="text"
+                  name="sector"
+                  class="p-2 rounded"
+                />
+              </div>
+              <div class="flex-column d-flex mt-3">
+                <label for="tipo" class="text-dark mb-2 text-center"
+                  >Tipo de inmueble</label
+                >
+                <input
+                  placeholder="Tipo de inmueble"
+                  type="text"
+                  name="Tipo_Inmueble"
+                  class="p-2 rounded"
+                />
+              </div>
+              <div class="flex-column d-flex my-3">
+                <label for="codigo" class="text-dark mb-2 text-center"
+                  >Buscar por codigo</label
+                >
+                <input
+                  placeholder="Codigo"
+                  type="number
+                "
+                  name="codigo"
+                  class="p-2 rounded"
+                />
+              </div>
+
+              <input
+                type="submit"
+                value="Buscar"
+                class="btn text-white btn-buscar"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ultimas Propiedades -->
+      <section>
+        <div class="container mt-5 mb-4">
+          <!-- titulo de la seccion -->
+          <div class="container text-center">
+            <h2>Ultimos inmuebles</h2>
+          </div>
+          <!-- propiedades -->
+
+          <div class="row my-5">
+            <div class="col-12 col-sm-4 img-container">
+              <img
+                src="https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/350794534_1286433048893275_8432145976152147626_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEmfak5GHlF4pmcpBKaWoELe4WzwCmax4d7hbPAKZrHh34OZBED8ZXUQgmyaKkghrx6CVQIs-CI_4HZuDwtZaEI&_nc_ohc=d98dgHxwtbAAX_IAKDK&_nc_ht=scontent.feoh6-1.fna&oh=00_AfC4UFs40GhejG9BqwWqIXyrH-luT8O_BXlOFTejxzckfA&oe=649B527F"
+                alt=""
+                class="w-100 h-100"
+              />
+            </div>
+
+            <div class="col-12 col-sm-8 mt-3 text-start d-flex flex-column">
+              <h4 class="fw-bold text-center">Apartamento en sabaneta</h4>
+              <p class="opacity-75">Arriendo</p>
+              <p class="">
+                conjunto residencial via la doctora cerca a la universidad de
+                san martin
+              </p>
+              <ul class="list-unstyled">
+                <li>3 habitaciones</li>
+                <li>1 Parqueadero cubierto</li>
+                <li>1 cuarto util</li>
+              </ul>
+              <span class="h3 span-precio"> Precio 2.600.000 </span>
+
+              <!-- boton de mostrar mas -->
+              <span class="text-center mt-2">
+                <button
+                  class="btn btn-ver-mas text-white"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvas1"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  Ver mas
+                </button>
+              </span>
+
+              <!-- offcanvas para mostrar mas informacion -->
+              <div
+                class="offcanvas offcanvas-end"
+                data-bs-scroll="true"
+                tabindex="-1"
+                id="offcanvas1"
+                aria-labelledby="offcanvasWithBothOptionsLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5
+                    class="offcanvas-title"
+                    id="offcanvasWithBothOptionsLabel"
+                  >
+                    Apartamento en Sabaneta
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <!-- esapcio para el carrusel -->
+                  <div></div>
+
+                  <p>
+                    Apartamento en arriendo en Sabaneta, en conjunto residencial
+                    via la doctora parte plana al lado de la universidad de san
+                    Martin, estrato 3.
+                  </p>
+                  <ul>
+                    <li>📐 Área de 96 metros cuadrados</li>
+                    <li>🛏️ 3 habitaciones</li>
+                    <li>🛋️ Sala comedor</li>
+                    <li>🚪 3 Clóset</li>
+                    <li>🚽 2 Baños</li>
+                    <li>🚗 1 Parqueadero cubierto</li>
+                    <li>📦 1 Cuarto útil</li>
+                    <li>🏙️ Balcon</li>
+                    <li>🧱 Patio</li>
+                  </ul>
+                  <p>
+                    Ademas incluye porteria las 24 horas del dia, zona de
+                    mascotas, una zona natural y parqueadero para visitantes
+                  </p>
+                  <span class="h3 span-precio"> Precio 2.600.000 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row my-5">
+            <div class="col-12 img-container">
+              <img
+                src="https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/350946250_163169166549545_6439124730404158253_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGkGw3ZoTmMD57wm7795NmHqlJfC_rnYRSqUl8L-udhFJr7SGsoPs8KNu1oJPyWjV88GMOcPr4JJOuTaLiNCVEO&_nc_ohc=ppph5SYMK14AX_Gfx_D&_nc_ht=scontent.feoh6-1.fna&oh=00_AfBHGfHvTfJbzGfZ-wAmg6_BxCcNOkOSkfcYB_VfM0AhUQ&oe=649A15F1"
+                alt=""
+                class="w-100 h-100"
+              />
+            </div>
+            <div class="col-12 mt-3 text-start">
+              <h4 class="fw-bold text-center">Casa en Itagui</h4>
+              <p class="opacity-75">Arriendo</p>
+              <p class="">
+                Casa con terraza en itagui, en el cubo de ditaires santana,
+                estrato 2
+              </p>
+              <ul class="list-unstyled">
+                <li>3 habitaciones</li>
+                <li>Patio</li>
+                <li>Zona de ropas</li>
+              </ul>
+              <span class="h3 span-precio"> Precio 1.200.000 </span>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-12 img-container">
+              <img
+                src="https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/350831962_1911864662523435_8940448491585603270_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEoDrPD7cT9h38C6X-AaQY7Gt9CexTbK-Ea30J7FNsr4RsMX_dbFQ13SzCg-gcQhilK42xxCWHv9lYmdn5uwWjy&_nc_ohc=6VTust3-BqoAX_8FsET&_nc_ht=scontent.feoh6-1.fna&oh=00_AfDLkTcFOF3zlJ4YS9u4IZj8Q9nKnll-uqwLLBwvdb8Grg&oe=649A0F58"
+                alt=""
+                class="w-100 h-100"
+              />
+            </div>
+            <div class="col-12 mt-3 text-start">
+              <h4 class="fw-bold text-center">Casa unifamiliar en Envigado</h4>
+              <p class="opacity-75">Arriendo</p>
+              <p class="">
+                conjunto residencial en el esmeraldal cerca a la transversal
+                inferior, estrato 5 de dos niveles
+              </p>
+              <ul class="list-unstyled">
+                <li>4 habitaciones</li>
+                <li>2 Garages cubierto</li>
+                <li>1 habitacion de servicio</li>
+              </ul>
+              <span class="h3 span-precio"> Precio 6.500.000 </span>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-12 img-container">
+              <img
+                src="https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/344745700_167544216255916_8021088729100187782_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGJLq2_wYeRBqZxBbMKBRIM9Fg8DpLsP830WDwOkuw_zfVN9FPa4Py7kk0HFWmX_FRpgLXkmSJ5nxU0hz99NHTG&_nc_ohc=ka2Ux6VodsoAX8RVa9J&_nc_ht=scontent.feoh6-1.fna&oh=00_AfBwhU-7YOze3PEXWBE9sdbxZquOUgIWS9ul1agwreTdzA&oe=649AE061"
+                alt="Apartamento_poblado"
+                class="w-100 h-100"
+              />
+            </div>
+            <div class="col-12 mt-3 text-start">
+              <h4 class="fw-bold text-center">Apartamento en el poblado</h4>
+              <p class="opacity-75">Venta</p>
+              <p class="">
+                Apartamento en venta en el poblado, conjunto residencial,
+                estrato 6 con piscina
+              </p>
+              <ul class="list-unstyled">
+                <li>3 habitaciones</li>
+                <li>1 Parqueadero cubierto</li>
+                <li>1 Habitacion de servicio</li>
+                <li>1 Cuarto util</li>
+              </ul>
+              <span class="h3 span-precio"> Precio 500.000.000 </span>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-12 img-container">
+              <img
+                src="https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/342068700_254960773661716_1921230166971393821_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEfDqufoOvidWfXkVkuf4duefxbk8-PSDN5_FuTz49IM1me5TyVgoBvDNLay_g2v6C4gxRG8JyiBHZMxxF29Zwj&_nc_ohc=Ced522aixD4AX-t2QwK&_nc_ht=scontent.feoh6-1.fna&oh=00_AfAoTy-q0CER998S7gneQcQRNePy9BL4AwPjM-xJzNoYJA&oe=649A80A7"
+                alt=""
+                class="w-100 h-100"
+              />
+            </div>
+            <div class="col-12 mt-3 text-start">
+              <h4 class="fw-bold text-center">Apartamento en envigado</h4>
+              <p class="opacity-75">Arriendo</p>
+              <p class="">conjunto residencial en el barrio la paz</p>
+              <ul class="list-unstyled">
+                <li>3 habitaciones</li>
+                <li>libre de administracion</li>
+                <li>Piscina</li>
+              </ul>
+              <span class="h3 span-precio"> Precio 2.200.000 </span>
+            </div>
+          </div> -->
+        </div>
+      </section>
     </main>
+
     <!-- pie de la pagina -->
     <footer>
+      <div class="container-fluid container-footer text-white py-3 px-3">
+        <div class="row">
+          <div class="col-12">
+            <h4>Quienes somos</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iste
+              ipsam voluptatibus consequuntur, dolorem labore temporibus veniam
+              similique, autem voluptas itaque velit sapiente possimus fugiat
+              eveniet reiciendis officiis totam voluptate?
+            </p>
+          </div>
+          <div class="col-12 d-flex flex-column">
+            <h4>Contactanos</h4>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-telephone text-white"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                />
+              </svg>
+              (604) 600 6197
+            </span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-whatsapp text-white"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                />
+              </svg>
+              317 489 5556
+            </span>
+            <p class="mt-2">
+              Transversal 34 DD sur N° 31-03 barrio Uribe Angel, Envigado
+              Antioquia
+            </p>
+          </div>
+          <div class="col-12 text-center mt-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-facebook text-white me-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                />
+              </svg>
+            </span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-instagram text-white"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
   <script
