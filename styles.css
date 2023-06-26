@@ -1,5 +1,6 @@
 :root{
   --color-btn: rgb(17, 97, 134);
+  --color-btn-hover: rgb(17, 97, 164);
 }
 
 
@@ -25,6 +26,12 @@
 
 .btn-ver-mas{
   width: 100px;
+  color: white;
+}
+
+.btn-ver-mas:hover{
+  background-color: var(--color-btn-hover);
+  color: white;
 }
 
 .span-precio{
@@ -37,6 +44,8 @@
 
 .img-container img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .container-footer,
@@ -53,4 +62,16 @@
 }
 ul li {
   list-style: none;
+}
+
+@media (min-width: 576px) {
+  .img-container {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-container{
+    padding: 0;
+  }
 }
